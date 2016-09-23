@@ -1,0 +1,52 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block title %}Cloud Vision Portal API tool{% endblock %}
+
+
+{% include 'navbar.html' %}
+
+{% block content %}
+
+<div class="container">
+  <h3>Enter Login Credentials</h3>
+
+{% with messages = get_flashed_messages() %}
+
+{% if messages %}
+
+<ul class="flashes">
+    {% for message in messages %}
+    <p style=  "color:#ff0000;">
+    <li>{{ message}}</li>
+    {% endfor %}
+
+</ul>
+
+{% endif %}
+
+{% endwith %}
+
+
+
+
+<div>
+  <form action = "/login" method = "post">
+
+    <hr>
+    <p>CVP IP Address: <input type=text  id="cvpHost" class="form-control" placeholder="CVP Address"  name="host"></p>
+    <p>CVP User: <input type=text  id="cvpUser" class="form-control" placeholder="username"  name="user"></p>
+    <p>CVP Password: <input type="password" id="cvpPassword" class="form-control" placeholder="password" required name="passwd"></p>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+    <br>
+
+  </form>
+</div>
+
+</div>
+
+    <footer class="footer">
+            <p>&copy; Wookieware 2016</p>
+        </footer>
+
+{% endblock %}

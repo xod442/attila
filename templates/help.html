@@ -1,0 +1,54 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block title %}DCN Manager help{% endblock %}
+
+
+{% include 'navbar.html' %}
+
+{% block content %}
+
+ <div class="jumbotron">
+				<h3>help for Arista/CVP API</h3>
+				<p class="lead"></p>
+        </div>
+
+<div class="container">
+
+{% with messages = get_flashed_messages() %}
+
+{% if messages %}
+
+<ul class="flashes">
+    {% for message in messages %}
+    <p style=  "color:#ff0000;">
+    <li>{{ message}}</li>
+    {% endfor %}
+
+</ul>
+
+{% endif %}
+
+{% endwith %}
+
+
+    </div>
+    <div class="form">
+    <form action = "/index">
+        <p> Application information</p>
+        <p>
+          <h4> Show Inventory </h4>
+          Program will list out switch inventory and stats<br><hr>
+
+       <input type = "submit" value = "Main" />
+
+     </form>
+  </div>
+
+
+
+    <footer class="footer">
+            <p>&copy; Wookieware 2016</p>
+        </footer>
+
+{% endblock %}
