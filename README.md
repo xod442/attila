@@ -19,7 +19,7 @@ The flask application will launch and can be access at:
 
 http://hostname:5000 - app runs on port 5000.
 
-Enter the login credentials and ip address of the CLoud Vision Protal Server. 
+Enter the login credentials and ip address of the Cloud Vision Portal Server. 
 
 From the main menu the only currently working function is list switches.
 
